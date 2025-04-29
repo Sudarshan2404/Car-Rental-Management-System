@@ -79,6 +79,11 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 
 ## 🛠 Setup Instructions
 
+### Prerequisites
+- Node.js and npm
+- Postgre.sql (reffer to db.sql folder)
+- setup the postgresql before starting project installation you will see all the sql queries used to create table in db.sql file
+
 ### 1. Clone the repository
 
 ```bash
