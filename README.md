@@ -18,14 +18,11 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 - Register & login
 - Book a car and view booking status
 - Cancel bookings
-- View invoices
 
 ### 🔸Admin (Port 4000)
 - Admin authentication
 - Add, update, delete cars
 - Manage all bookings (status updates)
-- View customer details
-- Generate invoices
 
 ---
 
