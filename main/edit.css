@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Kameron:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  width: 40vw;
+  height: 100vh;
+  background-color: #524dff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#tittle {
+  color: white;
+  font-size: 64px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.mil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.seats {
+  display: flex;
+  text-align: center;
+  color: white;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+
+.car {
+  width: 450px;
+  height: 250px;
+}
+
+.model {
+  text-align: center;
+  margin-top: 13px;
+  color: white;
+  font-size: 28px;
+}
+
+.cate {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.price {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 22px;
+}
+
+.right {
+  width: 70vw;
+  background-color: #e9eceb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.frm-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.all-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  gap: 15px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.group label {
+  text-align: center;
+}
+
+.group input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 10px;
+  border-radius: 25px;
+  border: solid #524dff 2px;
+}
+
+.radio {
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+#submit {
+  margin-top: 20px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 25px;
+  margin: auto;
+  border: none;
+  background-color: #524dff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}

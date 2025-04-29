@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Kameron:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+body {
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  font-family: "Inter", serif;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7494ec;
+  color: white;
+  z-index: 100;
+  text-align: center;
+}
+
+.logo {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.menu-items {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  gap: 15px;
+  color: white;
+  margin-right: 20px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+}
+
+.item {
+  list-style: none;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+}
+
+#name {
+  font-size: 22px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.log-img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.hamburger {
+  position: relative;
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+  text-decoration: underline;
+}
+
+#logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  gap: 4px;
+}
+
+.hero-sec {
+  display: flex;
+  margin: auto;
+  width: 98vw;
+  height: 90vh;
+  gap: 50px;
+  margin-top: 10px;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.book-form {
+  width: 35%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-boxes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box {
+  margin-top: 20px;
+}
+.add {
+  width: 26rem;
+  height: 3.2rem;
+  margin-right: 2px;
+  border-radius: 15px;
+  font-size: 22px;
+  text-align: center;
+  border: 2px solid #7494ec;
+}
+
+.submit {
+  margin-top: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #7494ec;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.billing {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 36%;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 32px;
+}
+
+.bill-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-price {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.car-price h2 {
+  font-size: 22px;
+  width: fit-content;
+}
+
+.line {
+  width: 60%;
+  margin: auto;
+  height: 2px;
+  margin-top: 20px;
+  background-color: black;
+}
+
+#cod {
+  margin-top: 10px;
+}
+
+#cod label {
+  font-size: 20px;
+}

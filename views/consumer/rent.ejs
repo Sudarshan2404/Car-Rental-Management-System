@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe</title>
+    <link rel="stylesheet" href="/consumer/rent.css" />
+  </head>
+  <body>
+    <div class="top-sec">
+      <div class="suggest-car">
+        <div class="nav-bar">
+          <div class="logo">
+            <h2 id="name">Louer Luxe</h2>
+          </div>
+          <div class="nav-menu">
+            <ul class="menu-items">
+              <li class="item"><a href="/">Home</a></li>
+              <li class="item"><a href="/About">About us</a></li>
+              <li class="item"><a href="/Account">Account</a></li>
+              <li class="item logout">
+                <a id="logout" href="/logout" title="logout">
+                  <p>logout</p>
+                  <img class="log-img" src="/assets/logout.svg" alt="sdsa"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <div class="hero">
+          <h1 class="title">LOUER LUXE</h1>
+
+          <div class="sugested-car">
+            <div class="info">
+              <h1 class="car-name"><%= car.model %></h1>
+              <div class="car-info">
+                <div class="seats">
+                  <img src="/assets/group-fill.svg" alt="" class="seat" />
+                  <h4><%= car.seats %></h4>
+                </div>
+                <div class="seats average">
+                  <img src="/assets/gas-pump-solid.svg" alt="" class="seat" />
+                  <h4><%= car.average %> KM/L</h4>
+                </div>
+              </div>
+              <h3 class="price">₹<%= car.price %>/Day</h3>
+              <form action="/book" method="get">
+                <input type="hidden" value="<%= car.id %>" name="carid"/>
+                <input id="submit" type="submit" value="Book Now" />
+              </form>
+            </div>
+            <div class="car-img">
+              <img src="<%= car.image %>" alt="porsche" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection">
+      <h1>Our Collection</h1>
+      <div class="filter">
+        <form id="filterForm" action="/filter" method="get">
+          <label for="filter"
+            ><img src="/assets/bx-filter.svg" alt="" />Filter</label
+          >
+          <select
+            id="category"
+            name="category"
+            onchange="document.getElementById('filterForm').submit();"
+          >
+            <option value="All" <%= selectedCategory === "All" ? "selected" : ""  %>>All</option>
+            <option value="Sports"  <%= selectedCategory === "Sports" ? "selected" : "" %>>Sports</option>
+            <option value="SUV" <%= selectedCategory === "SUV" ? "selected" : "" %>>Suv</option>
+            <option value="Hatchback" <%= selectedCategory === "Hatchback" ? "selected" : "" %>>Hatchback</option>
+            <option value="Sedan" <%= selectedCategory === "Sedan" ? "selected" : "" %>>Sedan</option>
+            <option value="Limousine" <%= selectedCategory === "Limousine" ? "selected" : "" %>>Limousine</option>
+          </select>
+        </form>
+      </div>
+       <span class="message"><%= message %></span>
+      <div class="cars-collection">
+        <% cars.forEach(item => { %>
+        <div class="cars">
+          <div class="car-photo">
+            <img src="<%= item.image %>" alt="" />
+          </div>
+          <div class="car-infor">
+            <h1 id="carname"><%= item.model %></h1>
+            <div class="aver">
+              <div class="seats-2">
+                <img class="seat-2" src="/assets/group-fill.svg" alt="" />
+                <h4><%= item.seats %></h4>
+              </div>
+              <div class="seats-2">
+                <img class="seat-2" src="/assets/gas-pump-solid.svg" alt="" />
+                <h4><%= item.average %> KM/L</h4>
+              </div>
+            </div>
+            <h2><%= item.category %></h2>
+            <h3>₹<%= item.price %>/Day</h3>
+            <form action="/book" method="get">
+              <input type="hidden" name="carid" value="<%= item.id %>" />
+              <input id="submit-2" type="submit" value="Book Now" />
+            </form>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <h1 id="footer-text">LOUER LUXE</h1>
+        <div class="foot-nav">
+          <ul>
+            <li -foot-item><a href="/">Home</a></li>
+            <li -foot-item><a href="#">About us</a></li>
+            <li -foot-item><a href="#">Contact us</a></li>
+            <li -foot-item><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <span class="line"></span>
+        <div class="foot-end">
+          <button>English</button>
+          <p>Non Copyrighted &copyLouer Luxe-2025</p>
+        </div>
+      </div>
+    </footer>
+    <script src="consumer/home.js"></script>
+  </body>
+</html>

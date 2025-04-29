@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= car.model%></title>
+    <link rel="stylesheet" href="/edit.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="car-info">
+          <h1 id="tittle">Car Info</h1>
+        </div>
+        <div class="info">
+          <img class="car" src="<%= car.image %>" alt="car" />
+          <h2 class="model"><%= car.model %></h2>
+          <div class="mil">
+            <div class="seats">
+              <img src="/assets/group-fill.svg" alt="photo" class="seat" />
+              <p><%= car.seats %> Seater</p>
+            </div>
+            <div class="seats">
+              <img src="/assets/gas-pump-solid.svg" alt="photo" class="seat" />
+              <p><%= car.average %> KM/L</p>
+            </div>
+          </div>
+          <p class="cate">Category:<% " " %> <%= car.category %></p>
+          <div class="price">
+            <h4>₹<%= car.price %></h4>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="edit-form">
+          <h2 class="frm-title">Make Changes</h2>
+          <div class="all-form">
+            <form action="/edit" method="post">
+              <input type="hidden" value="<%= car.id %>" name="id" />
+              <div class="group">
+                <label for="model">Model</label>
+                <input
+                  type="text"
+                  value="<%= car.model %>"
+                  placeholder="Model of the car"
+                  name="model"
+                />
+              </div>
+              <div class="group">
+                <label for="model">Price</label>
+                <input
+                  type="number"
+                  value="<%= car.price %>"
+                  placeholder="Price"
+                  name="price"
+                />
+              </div>
+              <div class="group">
+                <label for="model">Average</label>
+                <input
+                  type="number"
+                  value="<%= car.average %>"
+                  placeholder="Average"
+                  name="aver"
+                />
+              </div>
+              <div class="group radio">
+                <label
+                  ><input type="radio" name="carType" value="SUV" <%= cate ===
+                  "SUV" ? "checked" : "" %>/> SUV</label
+                >
+                <label
+                  ><input type="radio" name="carType" value="Sedan"<%= cate ===
+                  "Sedan" ? "checked" : "" %> /> Sedan</label
+                >
+                <label
+                  ><input type="radio" name="carType" value="Hatchback" <%= cate
+                  === "Hatchback" ? "checked" : "" %> /> Hatchback</label
+                >
+                <label
+                  ><input type="radio" name="carType" value="Sports" <%= cate
+                  === "Sports" ? "checked" : "" %>/> Sports</label
+                >
+                <label
+                  ><input type="radio" name="carType" value="Limousine" <%= cate
+                  === "Limousine" ? "checked" : "" %> /> Limousine</label
+                >
+              </div>
+              <div class="group">
+                <input id="submit" type="submit" class="submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

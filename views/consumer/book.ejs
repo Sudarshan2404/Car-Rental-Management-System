@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe</title>
+    <link rel="stylesheet" href="/consumer/book.css" />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="logo">
+        <h2 id="name">Louer Luxe</h2>
+      </div>
+      <div class="nav-menu">
+        <ul class="menu-items">
+          <li class="item"><a href="/">Home</a></li>
+          <li class="item"><a href="/About">About us</a></li>
+          <li class="item"><a href="/collection">Collection</a></li>
+          <li class="item"><a href="/Account">Account</a></li>
+          <li class="item logout">
+            <a href="/logout" title="logout">
+              <img class="log-img" src="/assets/logout.svg" alt="sdsa"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="hero-sec">
+      <div class="book-form">
+        <form action="/book" method="post">
+          <div class="input-boxes">
+            <div class="input-box">
+              <input
+                type="fix"
+                class="add"
+                name="carname"
+                value="<%= carname %>"
+                placeholder="Car Name"
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                class="add"
+                name="add1"
+                placeholder="Adress Line 1"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                class="add"
+                name="add2"
+                placeholder="Adress Line 2"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                class="add"
+                name="name"
+                value="<%= userinfo %>"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                class="add"
+                name="email"
+                value="<%= useremail %>"
+                placeholder="email"
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="date"
+                class="add"
+                name="date"
+                placeholder="Date"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="number"
+                class="add"
+                id="days"
+                name="days"
+                placeholder="Number of days you want car"
+                min="1"
+                max="4"
+                required
+              />
+            </div>
+            <input type="hidden" value="<%= carid %>" name="id" />
+            <input type="hidden" value="<%= carprice %>" name="pricee" />
+            <div id="cod">
+              <label for="cod">
+                <input
+                  type="radio"
+                  name="cod"
+                  value="Cash On Delivery"
+                  checked
+                />Cash on delivery</label
+              >
+            </div>
+            <input class="submit" type="submit" value="Confirm Booking" />
+          </div>
+        </form>
+      </div>
+      <div class="billing">
+        <h1 class="title">Billing</h1>
+        <div class="bill-info">
+          <div class="car-price">
+            <h2>Car price</h2>
+            <h2 class="price"><%= carprice %></h2>
+          </div>
+          <div class="car-price">
+            <h2>Number of days</h2>
+            <h2 class="day"></h2>
+          </div>
+          <span class="line"></span>
+          <div class="car-price">
+            <h2>Total</h2>
+            <h2 class="total">0</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const daysDisplay = document.querySelector(".day");
+        const daysInput = document.getElementById("days");
+        const total = document.querySelector(".total");
+        const priceElement = document.querySelector(".car-price h2:last-child");
+        const carprice = parseInt(priceElement.innerHTML) || 0;
+
+        daysInput.addEventListener("input", function () {
+          let days = parseInt(this.value) || 0;
+          daysDisplay.innerHTML = days;
+          let totalPrice = days * carprice;
+          total.innerHTML = `$${totalPrice}`;
+        });
+      });
+    </script>
+  </body>
+</html>

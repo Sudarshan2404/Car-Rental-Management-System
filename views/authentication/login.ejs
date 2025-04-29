@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe</title>
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel-right">
+        <h1>Welcome, Back Admin</h1>
+        <!-- <h3>Dont have an acocount</h3>
+        <form action="/register" method="get">
+          <input type="submit" value="Sign up" />
+        </form> -->
+      </div>
+      <div class="form-box">
+        <h1>Login</h1>
+        <form action="/login" class="register login" method="post">
+          <div class="input-box">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="submit">
+            <input type="submit" value="Login" />
+            <span class="msgbox"><%= message %></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

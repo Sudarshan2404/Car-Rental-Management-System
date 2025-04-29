@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe add car</title>
+    <link rel="stylesheet" href="/add.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="vertical-nav">
+        <div class="header">
+          <h4 class="logo">
+            <span class="font">L</span>ouer <span class="font">L</span>uxe
+            (admin panel)
+          </h4>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-items">
+            <li class="item">
+              <a class="no-line" href="/admin/dashboard">Dashboard</a>
+            </li>
+            <li class="item">
+              <a class="no-line" href="/admin/collection">Manage Collection</a>
+            </li>
+            <li class="item"><a class="no-line" href="/add">Add Car</a></li>
+            <li class="item">
+              <a class="no-line" href="/register">Register New Admins</a>
+            </li>
+            <li class="item">
+              <a class="no-line" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="other-panel">
+        <div class="card">
+          <div class="content">
+            <h1>Add new car to the collection</h1>
+            <div class="add-form">
+              <form
+                action="/addcar"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="group">
+                  <!-- <label id="label" for="name">Car Model</label> -->
+                  <input
+                    id="name-inp"
+                    type="text"
+                    name="name"
+                    placeholder="Car Model"
+                  />
+                </div>
+                <div class="group">
+                  <!-- <label id="label" for="seats">Number of seats</label> -->
+                  <input
+                    id="name-inp"
+                    type="number"
+                    name="seats"
+                    placeholder="Number of seats"
+                  />
+                </div>
+                <div class="group">
+                  <!-- <label id="label" for="seats">Price</label> -->
+                  <input
+                    id="name-inp"
+                    type="number"
+                    name="price"
+                    placeholder="Rent per day"
+                  />
+                </div>
+                <div class="group">
+                  <!-- <label id="label" for="average">Mileage</label> -->
+                  <input
+                    id="name-inp"
+                    type="number"
+                    name="aver"
+                    placeholder="Car Mileage"
+                  />
+                </div>
+                <div class="group file">
+                  <label id="label" for="image">
+                    <img src="/assets/upload.png" alt="up" class="upload" />
+                    <p>Upload</p>
+                  </label>
+                  <p id="file-name">Car Image</p>
+                  <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/*"
+                    onchange="updateFileName(this)"
+                    required
+                  />
+                </div>
+                <div class="group radio">
+                  <label
+                    ><input type="radio" name="carType" value="SUV" />
+                    SUV</label
+                  >
+                  <label
+                    ><input type="radio" name="carType" value="Sedan" />
+                    Sedan</label
+                  >
+                  <label
+                    ><input type="radio" name="carType" value="Hatchback" />
+                    Hatchback</label
+                  >
+                  <label
+                    ><input type="radio" name="carType" value="Sports" />
+                    Sports</label
+                  >
+                  <label
+                    ><input type="radio" name="carType" value="Limousine" />
+                    Limousine</label
+                  >
+                </div>
+                <input id="submit" type="submit" class="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/add.js"></script>
+  </body>
+</html>

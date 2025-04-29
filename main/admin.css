@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Jaro:opsz@6..72&family=Kameron:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Heebo", serif;
+}
+
+.red {
+  background-color: #dc0406;
+}
+
+.blue {
+  background-color: #4766cc;
+}
+
+.container {
+  display: flex;
+}
+
+.vertical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: #3c3d37;
+}
+
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  color: white;
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.nav-menu {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  width: 100%;
+  font-size: 1.3rem;
+  color: white;
+  list-style: none;
+  border-bottom: 1px solid white;
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.no-line {
+  color: white;
+  text-decoration: none;
+}
+
+.no-line:hover {
+  text-decoration: underline;
+}
+
+.other-panel {
+  width: 80vw;
+  min-height: 100vh;
+  margin-left: 20vw;
+  background-color: #e9eceb;
+}
+
+.header-2 {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 10vh;
+  background-color: #3c3d37;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+}
+
+.pp {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 50px;
+  align-self: center;
+}
+
+.info {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.boxes {
+  margin-top: 80px;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.count {
+  color: white;
+  font-size: 10rem;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.insight {
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  align-self: center;
+  margin-bottom: 80px;
+}
+
+.orders {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.order-info {
+  display: flex;
+  margin: auto;
+  width: 96%;
+  height: 60px;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+
+.order-info:last-child {
+  margin-bottom: 20px;
+}
+
+.tittle {
+  font-size: 18px;
+  margin-left: 40px;
+}
+
+.user-info {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.buttons {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+#submit {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  gap: 30px;
+}
+
+.title ul {
+  display: flex;
+  gap: 25px;
+}
+
+.font {
+  font-size: 22px;
+}
+
+.red {
+  color: #f70903;
+}
+
+.green {
+  color: #2ad600;
+}
+
+.yellow {
+  color: #dbd401;
+}
+
+.blue {
+  color: #3498db;
+}
+
+.trans {
+  background-color: transparent !important;
+}

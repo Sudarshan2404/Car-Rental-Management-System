@@ -1,0 +1,800 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Kameron:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.suggest-car {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: #7494ec;
+}
+
+.nav-bar {
+  font-family: "Inter", serif;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7494ec;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.menu-items {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  gap: 15px;
+  color: white;
+  margin-right: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+}
+
+.item {
+  list-style: none;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+}
+
+#name {
+  font-size: 22px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.log-img {
+  width: 15px;
+  height: 15px;
+  filter: invert(1);
+  align-self: center;
+}
+
+.hamburger {
+  position: relative;
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+  text-decoration: underline;
+}
+
+#logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  gap: 4px;
+}
+
+.hero {
+  font-family: "poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size: 42px;
+  letter-spacing: 23px;
+  color: white;
+  font-weight: 500;
+}
+
+.sugested-car {
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  margin-top: 50px;
+  gap: 80px;
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.car-img img {
+  width: 400px;
+  height: 250px;
+  border: 3px solid #fff;
+}
+
+.car-info {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.car-name {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.seats {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.seats h4 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#submit {
+  background-color: #fff;
+  color: black;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.collection {
+  gap: 30px;
+  width: 100%;
+  min-height: 10vh;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.collection h1 {
+  font-family: "heebo", sans-serif;
+  font-size: 36px;
+}
+
+.cars-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.cars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 42rem;
+  height: 43vh;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.car-photo {
+  width: 50%;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.car-photo img {
+  width: 15rem;
+  height: 12rem;
+}
+
+.car-infor {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+#carname {
+  font-size: 26px;
+  text-align: center;
+}
+
+.aver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.seats-2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.seats-2 h4 {
+  font-size: 20px;
+}
+
+.seat-2 {
+  width: 30px;
+  height: 30px;
+}
+
+.car-infor h3 {
+  font-size: 24px;
+}
+
+.car-infor h2 {
+  font-size: 26px;
+  font-weight: 550;
+}
+
+#submit-2 {
+  background-color: #7494ec;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 180px;
+  background-color: #7494ec;
+  margin-top: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "heebo", sans-serif;
+}
+
+.footer h1 {
+  font-size: 36px;
+  color: #fff;
+  letter-spacing: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.foot-nav {
+  margin-top: 15px;
+}
+
+.foot-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.foot-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.filter {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  padding-left: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+.filter label {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.filter img {
+  width: 25px;
+  height: 30px;
+}
+
+.filter form {
+  display: flex;
+  gap: 3px;
+}
+
+.filter option {
+  outline: none;
+}
+
+.line {
+  width: 93vw;
+  margin: auto;
+  height: 1.5px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.foot-end {
+  display: flex;
+  color: white;
+  width: 93vw;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.foot-end button {
+  background-color: #fff;
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  font-family: "heebo", sans-serif;
+  font-size: 26px;
+  color: red;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1204px) {
+  .nav-bar {
+    height: 12vh;
+    margin-top: 10px;
+  }
+
+  .suggest-car {
+    height: 90vh;
+  }
+  .sugested-car {
+    margin-top: 20px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    height: 80vh;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+    letter-spacing: 20px;
+    margin-top: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .car-img img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .info {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .car-name {
+    font-size: 30px;
+  }
+
+  .seats h4 {
+    font-size: 24px;
+  }
+
+  .seats img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .price {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Styles for small tablets */
+  .nav-bar {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    background-color: #7494ec;
+    width: 100vw;
+    text-align: center;
+    padding: 10px 0;
+    margin-right: 0;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .item {
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translatey(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translatey(-7px) rotate(-45deg);
+  }
+
+  #logout {
+    justify-content: center;
+  }
+
+  .hero {
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin: 0;
+  }
+
+  .car-img {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .car-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .info {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .car-name {
+    font-size: 22px;
+  }
+
+  .seats h4 {
+    font-size: 18px;
+  }
+
+  .seats img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+  .hero {
+    margin-top: 20px;
+  }
+
+  .sugested-car {
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    height: 70vh;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin: 0;
+  }
+
+  .car-img {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .car-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .info {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .car-name {
+    font-size: 22px;
+  }
+
+  .seats h4 {
+    font-size: 18px;
+  }
+
+  .seats img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .cars-collection {
+    width: 30rem;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .car-photo img {
+    width: 10rem;
+    height: 8rem;
+  }
+
+  #carname {
+    font-size: 18px;
+  }
+
+  .car-infor h4 {
+    font-size: 16px;
+  }
+
+  .seats-2 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .car-infor h2 {
+    font-size: 18px;
+  }
+
+  .car-infor h3 {
+    font-size: 18px;
+  }
+
+  #submit-2 {
+    font-size: 16px;
+  }
+
+  .footer h1 {
+    font-size: 24px;
+    letter-spacing: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for phones */
+  .nav-bar {
+    margin: 0;
+    padding: 0;
+  }
+
+  #name {
+    font-size: 14px;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: #7494ec;
+    width: 100vw;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+    margin-right: 0;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .item {
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translatey(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translatey(-7px) rotate(-45deg);
+  }
+
+  .hero {
+    margin-top: 20px;
+  }
+
+  #logout {
+    text-align: center;
+  }
+
+  .sugested-car {
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    height: 60vh;
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin: 0;
+  }
+
+  .car-img {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .car-img img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .info {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .car-name {
+    font-size: 22px;
+  }
+
+  .seats h4 {
+    font-size: 18px;
+  }
+
+  .seats img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .cars-collection {
+    width: 20rem;
+    height: 30rem;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .car-photo {
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .car-photo img {
+    width: 9rem;
+    height: 7rem;
+  }
+
+  .cars {
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    align-self: center;
+  }
+
+  #carname {
+    font-size: 14px;
+  }
+
+  .car-infor h4 {
+    font-size: 16px;
+  }
+
+  .cars {
+    gap: 10px;
+  }
+
+  .car-infor {
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seats-2 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .car-infor h2 {
+    font-size: 18px;
+  }
+
+  .car-infor h3 {
+    font-size: 18px;
+  }
+
+  #submit-2 {
+    font-size: 16px;
+  }
+
+  .footer h1 {
+    font-size: 24px;
+    letter-spacing: 10px;
+  }
+}

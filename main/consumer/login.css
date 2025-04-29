@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+  overflow: hidden;
+}
+
+.container {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.panel-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background-color: #7494ec;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-left: 0;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  gap: 30px;
+}
+
+.panel-right h1 {
+  text-align: center;
+  font-size: 46px;
+}
+
+.panel-right p {
+  font-size: 26px;
+}
+
+.panel-right input {
+  width: 80px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  gap: 10px;
+  margin: 20px;
+}
+
+.form-box h1 {
+  font-size: 36px;
+}
+
+.input-box {
+  margin-top: 10px;
+}
+
+.input-box input {
+  padding: 15px;
+  font-size: 18px;
+  width: 30vw;
+  border-radius: 25px;
+  border: none;
+  background-color: #efefef;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.submit input {
+  color: #fff;
+  background-color: #7494ec;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.msgbox {
+  display: flex;
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  color: red;
+}
+
+.signup {
+  display: none;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 60vh;
+  }
+  .panel-right {
+    display: none;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+
+  .form-box input {
+    width: 200px;
+  }
+
+  .signup {
+    display: block;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe</title>
+    <link rel="stylesheet" href="/registration.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel-right">
+        <h1>Hello, Welcome</h1>
+        <h3>Already have an Account</h3>
+        <form action="/login" method="get">
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+      <div class="form-box">
+        <h1>Register</h1>
+        <form action="/register" class="register" method="post">
+          <div class="input-box">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="name">
+            <input type="text" name="fname" placeholder="First Name" required />
+            <input type="text" name="lname" placeholder="Last Name" required />
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="submit">
+            <input type="submit" value="Register" />
+            <div class="signup">
+              Already have an account?<a href="/Login">Login</a>
+            </div>
+            <span class="msgbox"><%= message %></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louer Luxe</title>
+    <link rel="stylesheet" href="/consumer/account.css" />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="logo">
+        <h2 id="name">Louer Luxe</h2>
+      </div>
+      <div class="nav-menu">
+        <ul class="menu-items">
+          <li class="item"><a href="/">Home</a></li>
+          <li class="item"><a href="/About">About us</a></li>
+          <li class="item"><a href="/collection">Collection</a></li>
+          <!-- <li class="item"><a href="/login">Login</a></li> -->
+          <li class="item logout">
+            <a href="/logout" title="logout">
+              <img class="log-img" src="/assets/logout.svg" alt="sdsa"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="hero-sec">
+      <div class="account-info">
+        <div class="acc-logo">
+          <img src="/assets/account-circle.svg" alt="user" />
+        </div>
+        <div class="acc-info">
+          <h2 id="fullname"><%= fullname %></h2>
+          <h4 id="username">@<%= username %></h4>
+          <h3 id="email"><%= email %></h3>
+        </div>
+      </div>
+      <div class="orders">
+        <h2>Your Orders</h2>
+        <span class="line"></span>
+        <div class="order">
+          <% order.forEach(order => { %>
+          <div class="order-info">
+            <div class="status">
+              <div class="id">
+                <p id="order_id">#<%= order.order_id %></p>
+              </div>
+              <div class="sts">
+                <ul
+                  id="status"
+                  class="<% if (order.status === 'Cancelled') { %> red <% } else if (order.status === 'Pending') { %> yellow <% } else if (order.status === 'Confirmed'||'Completed') { %> green <% } %> %>"
+                >
+                  <li><%= order.status %></li>
+                </ul>
+              </div>
+            </div>
+            <div class="other">
+              <div class="image">
+                <img id="order-img" src="<%= order.image %>" alt="sdasd" />
+              </div>
+              <div class="car-info">
+                <h1 class="car-name"><%= order.model %></h1>
+                <h4 class="date">
+                  <%= new Date(order.date).toLocaleDateString("en-GB") %>
+                </h4>
+                <form action="/cancelBook" method="post">
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="<%= order.order_id %>"
+                  />
+                  <input type="submit" value="X Cancel" id="submit" />
+                </form>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="footer">
+      <h1 id="footer-text">LOUER LUXE</h1>
+      <div class="foot-nav">
+        <ul>
+          <li class="foot-item"><a href="/">Home</a></li>
+          <li class="foot-item"><a href="/About">About us</a></li>
+          <li class="foot-item"><a href="#">Contact us</a></li>
+          <li class="foot-item"><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <span class="line"></span>
+      <div class="foot-end">
+        <button>English</button>
+        <p>Non Copyrighted &copyLouer Luxe-2025</p>
+      </div>
+    </div>
+  </footer>
+</html>
