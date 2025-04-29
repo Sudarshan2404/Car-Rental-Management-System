@@ -13,13 +13,13 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 
 ## ✨ Key Features
 
-### 🔹Consumer (Port 3000)
+### 🔹Consumer
 - Browse available cars
 - Register & login
 - Book a car and view booking status
 - Cancel bookings
 
-### 🔸Admin (Port 4000)
+### 🔸Admin
 - Admin authentication
 - Add, update, delete cars
 - Manage all bookings (status updates)
