@@ -38,18 +38,26 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 ---
 ## Consumer Panel
 
+
 **Home page**
+
 
 ![Screenshot (54)](https://github.com/user-attachments/assets/d8c929cc-2099-4f4e-b4c2-fe5c3154d079)
 
 **Collection page**
 
+
 ![Car Collection 1](https://github.com/user-attachments/assets/d9576dcc-d9f1-4415-8a7d-e7b8728b1e50)
+
+
+
+
 
 
 ![Car Collection 2](https://github.com/user-attachments/assets/816d2639-5931-41b8-85b2-779dda7539d4)
 
 **Login and Registration page**
+
 
 ![Login Page](https://github.com/user-attachments/assets/d258b2e1-2bcf-45b8-b1e6-b3bae845569b)
 
@@ -58,24 +66,34 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 
 **Billing Page**
 
+
 ![Billing Page](https://github.com/user-attachments/assets/fb16d624-ef01-46a7-8c11-cfc44a611b27)
 
 **Account and order tracking page**
+
+
 ![Account and order tracking page](https://github.com/user-attachments/assets/40bce991-67c1-4542-8b4a-5519d94b3686)
 
 ## Admin Panel
 
+
 **Dashboard**
+
+
 
 ![Admin Dashboard](https://github.com/user-attachments/assets/007a6882-a68c-454a-b735-aedde2b0886f)
 
 **Collection**
 
+
 ![Admin car Collection:- ](https://github.com/user-attachments/assets/8b435cf7-97a3-48a3-b4e3-106833e01dfc)
 
 **Add Car**
 
+
 ![Add Car:-](https://github.com/user-attachments/assets/1b5d30e9-1cad-45fe-943d-1f622eceb6b4)
+
+
 
 ## 🛠 Setup Instructions
 
