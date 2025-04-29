@@ -39,7 +39,7 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 | Authentication | Passport.js, express-session      |
 
 ---
-##Consumer Panel
+## Consumer Panel
 
 **Home page**
 
@@ -66,7 +66,7 @@ A full-stack car rental platform with separate servers for admin and consumer ro
 **Account and order tracking page**
 ![Account and order tracking page](https://github.com/user-attachments/assets/40bce991-67c1-4542-8b4a-5519d94b3686)
 
-##Admin Panel
+## Admin Panel
 
 **Dashboard**
 
