@@ -167,7 +167,7 @@ Admin: http://localhost:4000
 ```
 
 ## 🧑‍💻 Author
-  Sudarshan Kulkarni \n
+  Sudarshan Kulkarni\n
   Connect with me on[Linkedin](https://www.linkedin.com/in/sudarshan-kulkarni-2a393824b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
  or check out more of my projects on [Github](https://github.com/Sudarshan2404)
 
